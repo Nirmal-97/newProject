@@ -1,4 +1,25 @@
-<p>Server with ID {{ serverId }} is {{ getStatus() }}</p>
-<button class="btn btn-primary" [disabled]="allowNewServer" (click) = " onCreateServer()">Add Server</button>
-<p>{{ serverWasCreated }}</p>
-<p [innerText]="allowNewServer"></p>
+<div>
+<label for="" class="mb-1">Server Name</label>
+<form action="">
+<input type="text" (input)="onUpdateServerName($event)" placeholder="Server Name">
+</form>
+<!--<p>{{serverDynamic}}</p> -->
+<!-- <p>Server with ID {{ serverId }} is {{ getStatus() }}</p> -->
+<button class="btn btn-primary mt-2" [disabled]="allowNewServer" (click) = " onCreateServer()">Add Server</button>
+<!-- <p>{{ serverWasCreated }}</p> -->
+<p *ngIf="serverWasCreated">Server was created{{serverDynamic}}</p>
+<!-- <p [innerText]="allowNewServer"></p> -->
+<label for="" class="mb-1">User Name</label><br>
+<input type="text" [(ngModel)]="username" placeholder="User Name"><br>
+<!-- <p>{{username}}</p> -->
+<div class="d-flex test">
+    <div>
+    <button class="btn btn-danger mt-2" [disabled]="username === ''" (click)="username = ''">Reset User</button>
+</div>
+<div>
+    <button class="btn btn-primary mt-2">Submit</button>
+</div>
+</div>
+
+
+</div>
