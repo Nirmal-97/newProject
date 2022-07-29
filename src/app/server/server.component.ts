@@ -1,37 +1,52 @@
-import { Component,OnInit } from "@angular/core";    
+import { Component,ElementRef,OnInit, ViewChild } from "@angular/core";    
 
 @Component({
   selector: 'app-server',
   templateUrl: './server.component.html',
-  styleUrls: ['./server.component.css']
+  styleUrls: ['./server.component.css'],
 })
 export class ServerComponent implements OnInit {
+  server = '';
   serverId: number = 10;
   serverStatus: string = 'offline';
   allowNewServer = false;
   serverWasCreated = 'No server was created';
   serverDynamic = '';
+  user = '';
   username = '';
   serverCreated = false;
 
+  
   getStatus() {
     return this.serverStatus;
   }
-
-  //   constructor() {
-  //     setTimeout(() => {
-  //       this.allowNewServer = true;
-  //     }, 2000);
-  //   }
-
-  ngOnInit(): void {}
-
-  onCreateServer() {
-    this.serverCreated = true;
-    this.serverWasCreated = 'Server Created Name is' + ' ' + this.serverDynamic;
-  }
-
-  onUpdateServerName(event: Event) {
-    this.serverDynamic = (<HTMLInputElement>event.target).value;
+  
+  constructor() {
+    // setTimeout(() => {
+      //   this.allowNewServer = true;
+      // }, 2000);
+      this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
+    }
+    
+    getColor() {
+      return this.serverStatus === 'online' ? 'green' : 'red';
+    }
+    
+    ngOnInit(): void {}
+    
+    onCreateServer() {
+      this.serverCreated = true;
+      this.serverWasCreated =
+      'Server Was Created Name is' + ' ' + this.serverDynamic;
+    }
+    
+    onUpdateServerName(event: Event) {
+      this.serverDynamic = (<HTMLInputElement>event.target).value;
+    }
+    
+  @ViewChild('username') userName!: ElementRef;
+  
+  onDeleteServer() {
+    this.userName.nativeElement.value = '';
   }
 }

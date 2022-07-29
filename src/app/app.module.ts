@@ -5,9 +5,10 @@ import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
   
 @NgModule({
-  declarations: [AppComponent,ServerComponent, HeaderComponent],
+  declarations: [AppComponent,ServerComponent, HeaderComponent, FooterComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

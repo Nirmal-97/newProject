@@ -1,4 +1,17 @@
+*{
+    font-family: Lab Grotesque;
+}
+
 .n-container{
     margin-left: 120px;
     margin-right: 120px;
+}
+
+lebel{
+    font-size: 20px;
+}
+
+p{
+    font-size: 20px;
+    font-family: sans-serif;
 }
