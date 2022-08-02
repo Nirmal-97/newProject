@@ -1,3 +1,4 @@
+<h1 class="text-warning">Server Test</h1>
 <div class="card">
 <label for="" class="mb-1">Server Name</label>
 <form action="">
@@ -13,8 +14,9 @@
 </form>
 <p>{{serverDynamic}}</p>
 <p>{{serverStatus}}</p>
-<p [ngStyle]="{backgroundColor: getColor()}" class = "p-2 text-white">{{server}} with ID is {{serverId}} {{ getStatus() }}</p>
-<p [ngStyle]="{backgroundColor: getColor()}" class = "p-2 text-white">{{server}} with ID is {{serverId}} {{ getStatus() }} </p>
+<p [ngStyle]="{backgroundColor: getColor() } " class = "p-2 text-white">{{server}} with ID is {{serverId}} {{ getStatus() }}</p>
+<!-- <p [ngStyle]="{backgroundColor: getColor()}" class = "p-2 text-white">{{server}} with ID is {{serverId}} {{ getStatus() }} </p> -->
+
 <p>{{ serverWasCreated }}</p>
 
 <div>

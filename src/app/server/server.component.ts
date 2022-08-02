@@ -15,6 +15,7 @@ export class ServerComponent implements OnInit {
   user = '';
   username = '';
   serverCreated = false;
+  testServer = ['test 1', 'test 2'];
 
   
   getStatus() {
@@ -29,16 +30,17 @@ export class ServerComponent implements OnInit {
     }
     
     getColor() {
-      return this.serverStatus === 'online' ? 'green' : 'red';
+      return this.serverStatus === 'online' ? 'purple' : 'red';
     }
     
     ngOnInit(): void {}
     
     onCreateServer() {
       this.serverCreated = true;
-      this.serverWasCreated =
-      'Server Was Created Name is' + ' ' + this.serverDynamic;
+      this.serverWasCreated = 'Server Was Created Name is' + ' ' + this.serverDynamic;
+      this.testServer.push(this.server);
     }
+ 
     
     onUpdateServerName(event: Event) {
       this.serverDynamic = (<HTMLInputElement>event.target).value;
