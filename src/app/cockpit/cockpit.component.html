@@ -8,25 +8,19 @@
                          <label for="">Server Name</label>
                         <br>
                         <br>
-                        <input type="text" style="width:100%" [(ngModel)]="name"> <br>
+                        <input type="text" style="width:100%" [(ngModel)]="newServerName"> <br>
                         <br>
                         <label for="">Server Content</label><br>
                         <br>
-                        <input type="text" style="width:100%" [(ngModel)]="name">
+                        <input type="text" style="width:100%" [(ngModel)]="newServerContent">
                     </form>
                     <br>
-                    <div class="d-flex gap-2">
-                        <div>
-                            <button class="btn btn-primary">Add Server</button>
-                        </div>
-                        <div>
-                            <button class="btn btn-primary">Add Server Blueprint</button>
-                        </div>
-                        <div>
-                            <button class="btn btn-primary" (click)="onDeleteServer()">Clear all</button>
-                        </div>
+                    <div>
+                        <button class="btn btn-primary" (click)="onAddServer()">Add Server</button>
+                        <button class="btn btn-primary" (click)="onAddBlueprint()">Add Server Blueprint</button>
+                        <button class="btn btn-primary">Clear all</button>
                     </div>
-            </div>
+                    </div>
         </div>
     </div>
 </div>
