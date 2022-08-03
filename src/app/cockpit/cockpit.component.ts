@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-cockpit',
   templateUrl: './cockpit.component.html',
-  styleUrls: ['./cockpit.component.css']
+  styleUrls: ['./cockpit.component.css'],
 })
-export class CockpitComponent implements OnInit {
+export class CockpitComponent {
+  name: string = ' ';
 
-  constructor() { }
+  @ViewChild('name') userName!: ElementRef;
 
-  ngOnInit(): void {
+  onDeleteServer() {
+    this.userName.nativeElement.value = '';
   }
-
 }

@@ -1,1 +1,33 @@
-<p>cockpit works!</p>
+<div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-sm-12">
+                    <h1>Add New Server or Blueprint</h1>
+                     <br>
+                    <form action="">
+                         <label for="">Server Name</label>
+                        <br>
+                        <br>
+                        <input type="text" style="width:100%" [(ngModel)]="name"> <br>
+                        <br>
+                        <label for="">Server Content</label><br>
+                        <br>
+                        <input type="text" style="width:100%" [(ngModel)]="name">
+                    </form>
+                    <br>
+                    <div class="d-flex gap-2">
+                        <div>
+                            <button class="btn btn-primary">Add Server</button>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary">Add Server Blueprint</button>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary" (click)="onDeleteServer()">Clear all</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
