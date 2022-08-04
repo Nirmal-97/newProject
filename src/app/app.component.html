@@ -1,28 +1,23 @@
-<!-- <div class="color">
-   <app-header></app-header>
-<div class="n-container">
-      <h1 class="mt-3">Server Test</h1> 
+<app-header></app-header>
+<div class="color">
+    <div class="n-container">
+      <h1 class="" class="text-primary">Server Test</h1> 
       <hr>
    <app-server></app-server> 
 </div>
-<div class="mt-5">
-<app-footer></app-footer>
-</div>
-</div> -->
 
-<div class="container">
     <app-cockpit 
     (serverCreated)="onAddServer($event)" 
     (blueprintCreated)="onAddBlueprint($event)">
     </app-cockpit>
-    <hr>
-    <div class="row">
-        <div class="col-xs-12">
-            <app-server-element 
-            *ngFor="let serverElement of serverElements" [srvElement]="serverElement">
+    <br>
+    <app-server-element *ngFor="let serverElement of serverElements" [srvElement]="serverElement">
         </app-server-element>
-        </div>
-    </div>
+<div class="mt-5">
+<app-footer></app-footer>
 </div>
+</div>
+
+
 
 

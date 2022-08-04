@@ -10,49 +10,48 @@ export class ServerComponent implements OnInit {
   ngOnInit(): void {
     throw new Error("Method not implemented.");
   }
-    // server = '';
-    // serverId: number = 10;
-    // serverStatus: string = 'offline';
-    // allowNewServer = false;
-    // serverWasCreated = 'No server was created';
-    // serverDynamic = '';
-    // user = '';
-    // username = '';
-    // serverCreated = false;
-    // testServer = ['test 1', 'test 2'];
+    server = '';
+    serverId: number = 10;
+    serverStatus: string = 'offline';
+    allowNewServer = false;
+    serverWasCreated = 'No server was created';
+    serverDynamic = '';
+    user = '';
+    username = '';
+    serverCreated = false;
+    testServer = ['test 1', 'test 2'];
 
     
-    // getStatus() {
-    //   return this.serverStatus;
-    // }
+    getStatus() {
+      return this.serverStatus;
+    }
     
-    // constructor() {
-    //   // setTimeout(() => {
-    //     //   this.allowNewServer = true;
-    //     // }, 2000);
-    //     this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
-    //   }
+    constructor() {
+      // setTimeout(() => {
+        //   this.allowNewServer = true;
+        // }, 2000);
+        this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
+      }
       
-    //   getColor() {
-    //     return this.serverStatus === 'online' ? 'purple' : 'red';
-    //   }
+      getColor() {
+        return this.serverStatus === 'online' ? 'purple' : 'red';
+      }
       
-    //   ngOnInit(): void {}
       
-    //   onCreateServer() {
-    //     this.serverCreated = true;
-    //     this.serverWasCreated = 'Server Was Created Name is' + ' ' + this.serverDynamic;
-    //     this.testServer.push(this.server);
-    //   }
+      onCreateServer() {
+        this.serverCreated = true;
+        this.serverWasCreated = 'Server Was Created Name is' + ' ' + this.serverDynamic;
+        this.testServer.push(this.server);
+      }
   
       
-    //   onUpdateServerName(event: Event) {
-    //     this.serverDynamic = (<HTMLInputElement>event.target).value;
-    //   }
+      onUpdateServerName(event: Event) {
+        this.serverDynamic = (<HTMLInputElement>event.target).value;
+      }
       
-    // @ViewChild('username') userName!: ElementRef;
+    @ViewChild('username') userName!: ElementRef;
     
-    // onDeleteServer() {
-    //   this.userName.nativeElement.value = '';
-    // }
+    onDeleteServer() {
+      this.userName.nativeElement.value = '';
+    }
 }

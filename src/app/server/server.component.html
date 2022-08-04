@@ -1,4 +1,4 @@
-<!-- <h1 class="text-warning">Server Test</h1>
+<!-- <h1 class="text-warning">Server Test</h1> -->
 <div class="card">
 <label for="" class="mb-1">Server Name</label>
 <form action="">
@@ -12,19 +12,20 @@
     </div>
 </div>
 </form>
-<p>{{serverDynamic}}</p>
-<p>{{serverStatus}}</p>
+<br>
+<!-- <p>{{serverDynamic}}</p> -->
+<!-- <p>{{serverStatus}}</p> -->
 <p [ngStyle]="{backgroundColor: getColor() } " class = "p-2 text-white">{{server}} with ID is {{serverId}} {{ getStatus() }}</p>
 <p [ngStyle]="{backgroundColor: getColor()}" class = "p-2 text-white">{{server}} with ID is {{serverId}} {{ getStatus() }} </p>
 
 <p>{{ serverWasCreated }}</p>
 
 <div>
-<p *ngIf="serverWasCreated">Server was created</p> 
-<ng-template>
+<!-- <p *ngIf="serverWasCreated">Server was created</p>  -->
+<!-- <ng-template>
     <p>NO server was created!</p>
-</ng-template>
-<p [innerText]="allowNewServer"></p>
+</ng-template> -->
+<!-- <p [innerText]="allowNewServer"></p> -->
 <label for="" class="mb-1">User Name</label><br>
 <input type="text" [(ngModel)]="user" placeholder="User Name"><br>
 <p>{{user}}</p>
@@ -37,4 +38,4 @@
 </div>
 </div>
 </div> 
-</div> -->
+</div>

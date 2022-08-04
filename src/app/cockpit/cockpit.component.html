@@ -1,19 +1,18 @@
 <div>
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-sm-12">
-                    <h1>Add New Server or Blueprint</h1>
+    <div class="n-container mt-5">
+        <div class="ro">
+            <div class="">
+                    <h1 class="text-primary">Add New Server or Blueprint</h1>
                      <br>
-                    <!-- <form action=""> -->
-                         <label for="">Server Name</label>
+                         <label for="" class="text-primary">Server Name</label>
                         <br>
                         <br>
                         <input type="text" style="width:100%" [(ngModel)]="newServerName"> <br>
                         <br>
-                        <label for="">Server Content</label><br>
+                        <label for="" class="text-primary">Server Content</label><br>
                         <br>
                         <input type="text" style="width:100%" [(ngModel)]="newServerContent">
-                    <!-- </form> -->
+                    <br>
                     <br>
                     <div>
                         <button class="btn btn-primary" (click)="onAddServer()">Add Server</button>
