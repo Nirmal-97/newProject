@@ -3,17 +3,39 @@
       <h1 class="" class="text-primary">Server Test</h1> 
       <hr>
    <app-server></app-server> 
-</div>
+   
+   <app-cockpit 
+   (serverCreated)="onAddServer($event)" 
+   (blueprintCreated)="onAddBlueprint($event)">
+</app-cockpit>
+<br>
+<app-server-element *ngFor="let serverElement of serverElements" [srvElement]="serverElement">
+</app-server-element>
+<br>
+<div>
+    <button class="btn btn-primary" (click)="onlyOdd = !onlyOdd">Add Numbers</button>
+    <ul class="list-group text-primary">
+        <div *ngIf="onlyOdd">
+            <li class="list-group-items" 
+            *ngFor="let odd of oddNumbers" [ngClass]="{odd: odd % 2 !== 0}" 
+            [ngStyle]="{backgroundColor: odd % 2 !== 0 ? 'yellow' : 'transparent'}">
+                {{odd}}
+            </li>
+        </div>
+        <div *ngIf="!onlyOdd">
+            <li  class="list-group-items" *ngFor="let even of evenNumbers" [ngClass]="{odd: even % 2 !== 0}">
+                {{even}}
+            </li>
 
-    <app-cockpit 
-    (serverCreated)="onAddServer($event)" 
-    (blueprintCreated)="onAddBlueprint($event)">
-    </app-cockpit>
-    <br>
-    <app-server-element *ngFor="let serverElement of serverElements" [srvElement]="serverElement">
-        </app-server-element>
+        </div>
+        
+    </ul>
+
+</div>
+<p appBasicHighlight>Style me with selector</p>
 <div class="mt-5">
-<app-footer></app-footer>
+    <app-footer></app-footer>
+</div>
 </div>
 </div>
 

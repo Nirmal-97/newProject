@@ -22,7 +22,6 @@ export class ServerElementComponent implements OnInit {
   } 
 
   ngOnInit() {
-    console.log('ngOnInit called');
-    
+    console.log('ngOnInit called'); 
   }
 }

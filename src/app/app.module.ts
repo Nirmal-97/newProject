@@ -6,15 +6,21 @@ import { ServerComponent } from './server/server.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
-import { CockpitComponent } from './cockpit/cockpit.component';
+import { CockpitComponent } from './cockpit/cockpit.component'
 import { ServerElementComponent } from './server-element/server-element.component';
+import { BasicHIghlightDirective } from './basic-highlight/basic-highlight-directive';
   
 @NgModule({
-  declarations: [AppComponent,ServerComponent, HeaderComponent, FooterComponent, CockpitComponent, ServerElementComponent],
+  declarations: [
+    AppComponent,
+    ServerComponent,
+    BasicHIghlightDirective,HeaderComponent,
+    FooterComponent,
+    CockpitComponent,
+    ServerElementComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {
-  
-}
+export class AppModule {}

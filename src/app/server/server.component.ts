@@ -7,6 +7,7 @@ import { Component,ElementRef,OnInit, ViewChild } from "@angular/core";
 })
 
 export class ServerComponent implements OnInit {
+
   ngOnInit(): void {
     throw new Error("Method not implemented.");
   }
@@ -14,7 +15,7 @@ export class ServerComponent implements OnInit {
     serverId: number = 10;
     serverStatus: string = 'offline';
     allowNewServer = false;
-    serverWasCreated = 'No server was created';
+    serverWasCreated = 'No server was created'; 
     serverDynamic = '';
     user = '';
     username = '';
@@ -53,5 +54,6 @@ export class ServerComponent implements OnInit {
     
     onDeleteServer() {
       this.userName.nativeElement.value = '';
-    }
+  }
+  
 }

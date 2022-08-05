@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  // number = [1, 2, 3, 4, 5, 6]
+  oddNumbers = [1, 3, 5];
+  evenNumbers = [2, 4];
+  onlyOdd = false;
+  
   serverElements = [
     { type: 'Server', name: 'Test Server', content: 'Just a Test!' },
   ];
