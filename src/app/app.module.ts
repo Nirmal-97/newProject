@@ -9,7 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { CockpitComponent } from './cockpit/cockpit.component'
 import { ServerElementComponent } from './server-element/server-element.component';
 import { BasicHIghlightDirective } from './basic-highlight/basic-highlight-directive';
-  
+import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';  
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +18,7 @@ import { BasicHIghlightDirective } from './basic-highlight/basic-highlight-direc
     FooterComponent,
     CockpitComponent,
     ServerElementComponent,
+    BetterHighlightDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
