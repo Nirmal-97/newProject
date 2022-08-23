@@ -10,7 +10,8 @@ import { CockpitComponent } from './cockpit/cockpit.component'
 import { ServerElementComponent } from './server-element/server-element.component';
 import { BasicHIghlightDirective } from './basic-highlight/basic-highlight-directive';
 import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
-import { UnlessDirective } from './unless.directive';  
+import { UnlessDirective } from './unless.directive';
+import { DirectivesServiceComponent } from './directives-service/directives-service.component';  
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +22,7 @@ import { UnlessDirective } from './unless.directive';
     ServerElementComponent,
     BetterHighlightDirective,
     UnlessDirective,
+    DirectivesServiceComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
